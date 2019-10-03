@@ -18,7 +18,7 @@ codecs
 from subword_nmt.apply_bpe import BPE
 import codecs
 
-dataFolder = path to this repo
+dataFolder = path to this repo +'/info'
 
 # For Proteins
 vocab_path = dataFolder + '/codes_protein.txt'
@@ -39,7 +39,9 @@ idx2word_d = sub_csv['index'].values
 words2idx_d = dict(zip(idx2word_d, range(0, len(idx2word_d))))
 
 # Example: Given Drug SMILES String s, output a bit vector v
-t = dbpe.process_line(s).split()  
+s = 'CC(C)C(=C)CC(O)C(C)(O)[C@H]1CC[C@H]2C3=C[C@H](OC(=O)C)[C@H]4[C@@H](OC(=O)C)[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C'
+t = dbpe.process_line(s).split()
+# t: 'CC(C)C (=C )CC (O)C (C) (O) [C@H]1CC [C@H]2C 3=C [C@H](OC(=O)C) [C@H]4 [C@@H](OC(=O)C) [C@@H](O)CC [C@]4(C)[C@H]3CC [C@]12C'
 i = [words2idx_d[i] for i in t]
 v = np.zeros(len(idx2word_d), )
 v[i] = 1
