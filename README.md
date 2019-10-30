@@ -1,5 +1,5 @@
 # Explainable Substructure Partition Fingerprint (ESPF)
-Repository for "Explainable Substructure Partition Fingerprint for Protein, Drug, and More" (NeurIPS Learning Meaningful Representation of Life Workshop)
+Repository for "Explainable Substructure Partition Fingerprint for Protein, Drug, and More" (NeurIPS Learning Meaningful Representation of Life Workshop) [paper](https://github.com/kexinhuang12345/ESPF/blob/master/paper.pdf)
 
 ## Installation
 ```
